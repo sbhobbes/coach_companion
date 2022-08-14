@@ -1,0 +1,52 @@
+[tool.briefcase]
+project_name = "Coach Companion"
+bundle = "com.example.coachcompanion"
+version = "0.0.1"
+url = "https://coachcompanion.example.com/coachcompanion"
+license = "Proprietary"
+author = 'Monarch Technologies'
+author_email = "springborotechnologies@gmail.com"
+
+[tool.briefcase.app.coachcompanion]
+formal_name = "Coach Companion"
+description = "My first application"
+icon = "src/coachcompanion/resources/coachcompanion"
+sources = ['src/coachcompanion']
+requires = [
+]
+
+
+[tool.briefcase.app.coachcompanion.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev34',
+    'std-nslog~=1.0.0'
+]
+
+[tool.briefcase.app.coachcompanion.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev34',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.coachcompanion.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev34',
+]
+
+# Mobile deployments
+[tool.briefcase.app.coachcompanion.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev34',
+    'std-nslog~=1.0.0'
+]
+
+[tool.briefcase.app.coachcompanion.android]
+requires = [
+    'toga-android>=0.3.0.dev34'
+]
